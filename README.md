@@ -4,9 +4,9 @@
 
 * Ruby 2.6.4
 
-* MySQL 
+* MySQL Username: root Password: toor
 
-* Rails 6.0
+* Rails 6.0 
 
 * YARN is my package manager . I guess you 'll have to install the same to use
 
