@@ -1,0 +1,77 @@
+<%= form_with(model: unit, local: true) do |form| %>
+  <% if unit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(unit.errors.count, "error") %> prohibited this unit from being saved:</h2>
+
+      <ul>
+        <% unit.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :oc %>
+    <%= form.text_field :oc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ministry %>
+    <%= form.text_field :ministry %>
+  </div>
+
+  <div class="field">
+    <%= form.label :office_name %>
+    <%= form.text_field :office_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :office_acronym %>
+    <%= form.text_area :office_acronym %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.text_field :category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :audit_section %>
+    <%= form.text_field :audit_section %>
+  </div>
+
+  <div class="field">
+    Type<br/>
+    <%= form.text_area :utyp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_area :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fax %>
+    <%= form.text_field :fax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :remarks %>
+    <%= form.text_area :remarks %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

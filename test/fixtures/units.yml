@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  oc: MyString
+  ministry: MyString
+  office_name: MyString
+  office_acronym: MyText
+  category: MyString
+  audit_section: MyString
+  utyp: MyText
+  address: MyText
+  phone: MyString
+  email: MyString
+  fax: MyString
+  remarks: MyText
+
+two:
+  oc: MyString
+  ministry: MyString
+  office_name: MyString
+  office_acronym: MyText
+  category: MyString
+  audit_section: MyString
+  utyp: MyText
+  address: MyText
+  phone: MyString
+  email: MyString
+  fax: MyString
+  remarks: MyText
