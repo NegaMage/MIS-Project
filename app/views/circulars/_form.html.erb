@@ -1,0 +1,52 @@
+<%= form_with(model: circular, local: true) do |form| %>
+  <% if circular.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(circular.errors.count, "error") %> prohibited this circular from being saved:</h2>
+
+      <ul>
+        <% circular.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :circularid %>
+    <%= form.number_field :circularid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :circulartype %>
+    <%= form.text_field :circulartype %>
+  </div>
+
+  <div class="field">
+    <%= form.label :from %>
+    <%= form.text_area :from %>
+  </div>
+
+  <div class="field">
+    <%= form.label :keywords %>
+    <%= form.text_area :keywords %>
+  </div>
+
+  <div class="field">
+    <%= form.label :file %>
+    <%= form.file_field :file %>
+  </div>
+
+  <div class="field">
+    <%= form.label :receiptdate %>
+    <%= form.datetime_select :receiptdate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :broadcastdate %>
+    <%= form.datetime_select :broadcastdate %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Register ID:</strong>
+  <%= @register.registerid %>
+</p>
+
+<p>
+  <strong>Register Type:</strong>
+  <%= @register.registertype %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @register.deadline %>
+</p>
+
+<p>
+  <%= link_to "Download file", @register.regfile, download: '' %>
+</p>
+
+<p>
+  <strong>First Reminder:</strong>
+  <%= @register.firstreminder %>
+</p>
+
+<p>
+  <strong>Number of Reminders:</strong>
+  <%= @register.numofreminders %>
+</p>
+
+<p>
+  <strong>Reminder Period:</strong>
+  <%= @register.reminderperiod %>
+</p>
+
+<p>
+  <strong>Reminder Email:</strong>
+  <%= @register.reminderemail %>
+</p>
+
+<%= link_to 'Edit', edit_register_path(@register) %> |
+<%= link_to 'Back', registers_path %>
