@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Circular ID:</strong>
+  <%= @circular.circularid %>
+</p>
+
+<p>
+  <strong>Circular Type:</strong>
+  <%= @circular.circulartype %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @circular.from %>
+</p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @circular.keywords %>
+</p>
+
+<p>
+  <%= link_to "Download file", @circular.file, download: '' %>
+</p>
+
+<p>
+  <strong>Receipt Date:</strong>
+  <%= @circular.receiptdate %>
+</p>
+
+<p>
+  <strong>Broadcast Date:</strong>
+  <%= @circular.broadcastdate %>
+</p>
+
+<%= link_to 'Edit', edit_circular_path(@circular) %> |
+<%= link_to 'Back', circulars_path %>

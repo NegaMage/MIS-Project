@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  registerid: 1
+  registertype: MyString
+  deadline: 2019-12-15 17:56:47
+  firstreminder: 2019-12-15 17:56:47
+  numofreminders: 1
+  reminderperiod: 1
+  reminderemail: MyString
+
+two:
+  registerid: 1
+  registertype: MyString
+  deadline: 2019-12-15 17:56:47
+  firstreminder: 2019-12-15 17:56:47
+  numofreminders: 1
+  reminderperiod: 1
+  reminderemail: MyString
