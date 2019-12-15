@@ -11,3 +11,7 @@
 * Node.js
 
 "# MIS-Project" 
+This project uses active storage features in Rails 6.0.
+Run:
+rails active_storage:install
+rake db:migrate 
