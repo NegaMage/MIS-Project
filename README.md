@@ -14,10 +14,10 @@
 
 Example installation
 
-Run:(for ubuntu)
+Run:(for ubuntu)<br/>
 rails active_storage:install
 
-Run:(for windows)
+Run:(for windows)<br/>
 gem install activestorage
 
 MIS PROJECT
