@@ -10,11 +10,18 @@
 
 * Node.js
 
-"# MIS-Project" 
-This project uses active storage features in Rails 6.0.
+*Gems needed to explicitly install: mysql2, activestorage
 
-Run:
+Example installation
 
+Run:(for ubuntu)<br/>
 rails active_storage:install
 
-rake db:migrate 
+Run:(for windows)<br/>
+gem install activestorage
+
+MIS PROJECT
+
+
+
+
