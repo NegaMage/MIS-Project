@@ -71,6 +71,21 @@
     <%= form.text_area :remarks %>
   </div>
 
+  <div class="field">
+    <%= form.label :pfms_implemented %>
+    <%= form.check_box :pfms_implemented %>
+  </div>
+
+  <div class="field">
+    <%= form.label :generates_misreports %>
+    <%= form.check_box :generates_misreports %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mis_report_frequency %>
+    <%= form.text_area :mis_report_frequency %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_15_122647) do
+ActiveRecord::Schema.define(version: 2019_12_18_143943) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -31,6 +31,29 @@ ActiveRecord::Schema.define(version: 2019_12_15_122647) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "audits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "unit_id"
+    t.date "start_date"
+    t.date "end_date"
+    t.integer "duration"
+    t.integer "inspecting_officer"
+    t.string "poa"
+    t.bigint "total_expenditure"
+    t.bigint "salary_expenditure"
+    t.decimal "sal_tot_ratio", precision: 10
+    t.bigint "sanc_expenditure"
+    t.bigint "actual_spent"
+    t.decimal "actual_sanc_ratio", precision: 10
+    t.bigint "excess_expenditure"
+    t.bigint "saving"
+    t.decimal "excess_saving_ratio", precision: 10
+    t.integer "staff_sanc"
+    t.integer "staff_vacancy"
+    t.decimal "vacancy_percent", precision: 10
+    t.text "remarks"
+    t.index ["unit_id"], name: "index_audits_on_unit_id"
   end
 
   create_table "circulars", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -84,6 +107,9 @@ ActiveRecord::Schema.define(version: 2019_12_15_122647) do
     t.text "remarks"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "pfms_implemented"
+    t.boolean "generates_misreports"
+    t.string "mis_report_frequency"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

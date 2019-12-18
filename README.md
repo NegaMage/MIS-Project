@@ -10,4 +10,18 @@
 
 * Node.js
 
-"# MIS-Project" 
+*Gems needed to explicitly install: mysql2, activestorage
+
+Example installation
+
+Run:(for ubuntu)<br/>
+rails active_storage:install
+
+Run:(for windows)<br/>
+gem install activestorage
+
+MIS PROJECT
+
+
+
+

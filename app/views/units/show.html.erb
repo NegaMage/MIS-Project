@@ -60,5 +60,20 @@
   <%= @unit.remarks %>
 </p>
 
+<p>
+  <strong>PFMS:</strong>
+  <%= @unit.pfms_implemented %>
+</p>
+
+<p>
+  <strong>Generates MIS:</strong>
+  <%= @unit.generates_misreports %>
+</p>
+
+<p>
+  <strong>mis frequency:</strong>
+  <%= @unit.mis_report_frequency %>
+</p>
+
 <%= link_to 'Edit', edit_unit_path(@unit) %> |
 <%= link_to 'Back', units_path %>
