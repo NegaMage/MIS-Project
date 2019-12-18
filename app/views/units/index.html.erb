@@ -17,6 +17,9 @@
       <th>Email</th>
       <th>Fax</th>
       <th>Remarks</th>
+      <th>PFMS</th>
+      <th>Gen mis</th>
+      <th>mis freq</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -36,6 +39,9 @@
         <td><%= unit.email %></td>
         <td><%= unit.fax %></td>
         <td><%= unit.remarks %></td>
+        <td><%= unit.pfms_implemented %></td>
+        <td><%= unit.generates_misreports %></td>
+        <td><%= unit.mis_report_frequency %></td>
         <td><%= link_to 'Show', unit %></td>
         <td><%= link_to 'Edit', edit_unit_path(unit) %></td>
         <td><%= link_to 'Destroy', unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -69,6 +69,6 @@ class UnitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def unit_params
-      params.require(:unit).permit(:oc, :ministry, :office_name, :office_acronym, :category, :audit_section, :utyp, :address, :phone, :email, :fax, :remarks)
+      params.require(:unit).permit(:oc, :ministry, :office_name, :office_acronym, :category, :audit_section, :utyp, :address, :phone, :email, :fax, :remarks,:pfms_implemented,:generates_misreports,:mis_report_frequency)
     end
 end
