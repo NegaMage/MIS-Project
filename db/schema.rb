@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_18_143943) do
+ActiveRecord::Schema.define(version: 2019_12_19_073325) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -34,26 +34,28 @@ ActiveRecord::Schema.define(version: 2019_12_18_143943) do
   end
 
   create_table "audits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "unit_id"
-    t.date "start_date"
-    t.date "end_date"
+    t.bigint "units_id"
+    t.datetime "startdate"
+    t.datetime "enddate"
     t.integer "duration"
-    t.integer "inspecting_officer"
     t.string "poa"
-    t.bigint "total_expenditure"
-    t.bigint "salary_expenditure"
-    t.decimal "sal_tot_ratio", precision: 10
-    t.bigint "sanc_expenditure"
-    t.bigint "actual_spent"
-    t.decimal "actual_sanc_ratio", precision: 10
-    t.bigint "excess_expenditure"
-    t.bigint "saving"
-    t.decimal "excess_saving_ratio", precision: 10
-    t.integer "staff_sanc"
-    t.integer "staff_vacancy"
-    t.decimal "vacancy_percent", precision: 10
+    t.integer "totalexpenditure"
+    t.integer "salarayexpenditure"
+    t.float "saltotalratio"
+    t.integer "capitalcomponent"
+    t.integer "revenuecomponent"
+    t.integer "sanctionedexpenditure"
+    t.integer "actualspent"
+    t.float "actualsanctionedratio"
+    t.integer "excessexpenditure"
+    t.integer "savings"
+    t.float "excesssavingsratio"
+    t.integer "staffsanctioned"
+    t.integer "staffvacancy"
+    t.float "vacancypercent"
     t.text "remarks"
-    t.index ["unit_id"], name: "index_audits_on_unit_id"
+    t.boolean "constructionworksongoing"
+    t.index ["units_id"], name: "index_audits_on_units_id"
   end
 
   create_table "circulars", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
