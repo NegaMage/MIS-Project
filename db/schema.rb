@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2019_12_19_073325) do
   end
 
   create_table "audits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "units_id"
+    t.bigint "unit_id"
     t.datetime "startdate"
     t.datetime "enddate"
     t.integer "duration"
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2019_12_19_073325) do
     t.float "vacancypercent"
     t.text "remarks"
     t.boolean "constructionworksongoing"
-    t.index ["units_id"], name: "index_audits_on_units_id"
+    t.index ["unit_id"], name: "index_audits_on_unit_id"
   end
 
   create_table "circulars", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -115,4 +115,5 @@ ActiveRecord::Schema.define(version: 2019_12_19_073325) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "audits", "units"
 end

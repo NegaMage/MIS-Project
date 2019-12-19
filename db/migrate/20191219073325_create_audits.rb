@@ -1,7 +1,7 @@
 class CreateAudits < ActiveRecord::Migration[6.0]
   def change
     create_table :audits do |t|
-      t.belongs_to :units
+      t.references :unit, index: true, foreign_key: true
       t.datetime :startdate
       t.datetime :enddate
       t.integer :duration
