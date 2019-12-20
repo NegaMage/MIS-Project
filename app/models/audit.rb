@@ -1,3 +1,4 @@
 class Audit < ApplicationRecord
-    belongs_to :units
+    belongs_to :unit
+    validates :unit_id, presence: true
 end
