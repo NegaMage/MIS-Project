@@ -12,13 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :circularid %>
-    <%= form.number_field :circularid %>
-  </div>
-
-  <div class="field">
-    <%= form.label :circulartype %>
-    <%= form.text_field :circulartype %>
+    <%= form.label :circular_type %>
+    <%= form.text_field :circular_type %>
   </div>
 
   <div class="field">
@@ -32,18 +27,18 @@
   </div>
 
   <div class="field">
-    <%= form.label :file %>
-    <%= form.file_field :file %>
+    <%= form.label :circular_file %>
+    <%= form.file_field :circular_file %>
   </div>
 
   <div class="field">
-    <%= form.label :receiptdate %>
-    <%= form.datetime_select :receiptdate %>
+    <%= form.label :receipt_date %>
+    <%= form.datetime_select :receipt_date %>
   </div>
 
   <div class="field">
-    <%= form.label :broadcastdate %>
-    <%= form.datetime_select :broadcastdate %>
+    <%= form.label :broadcast_date %>
+    <%= form.datetime_select :broadcast_date %>
   </div>
 
   <div class="actions">

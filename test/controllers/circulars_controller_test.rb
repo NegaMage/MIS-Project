@@ -17,7 +17,7 @@ class CircularsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create circular" do
     assert_difference('Circular.count') do
-      post circulars_url, params: { circular: { broadcastdate: @circular.broadcastdate, circularid: @circular.circularid, circulartype: @circular.circulartype, from: @circular.from, keywords: @circular.keywords, receiptdate: @circular.receiptdate } }
+      post circulars_url, params: { circular: { broadcast_date: @circular.broadcast_date, circular_type: @circular.circular_type, from: @circular.from, keywords: @circular.keywords, receipt_date: @circular.receipt_date } }
     end
 
     assert_redirected_to circular_url(Circular.last)
@@ -34,7 +34,7 @@ class CircularsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update circular" do
-    patch circular_url(@circular), params: { circular: { broadcastdate: @circular.broadcastdate, circularid: @circular.circularid, circulartype: @circular.circulartype, from: @circular.from, keywords: @circular.keywords, receiptdate: @circular.receiptdate } }
+    patch circular_url(@circular), params: { circular: { broadcast_date: @circular.broadcast_date, circular_type: @circular.circular_type, from: @circular.from, keywords: @circular.keywords, receipt_date: @circular.receipt_date } }
     assert_redirected_to circular_url(@circular)
   end
 

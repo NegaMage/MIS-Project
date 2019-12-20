@@ -1,17 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  circularid: 1
-  circulartype: MyString
+  circular_type: MyString
   from: MyText
   keywords: MyText
-  receiptdate: 2019-12-15 17:32:10
-  broadcastdate: 2019-12-15 17:32:10
+  receipt_date: 2019-12-20 11:33:32
+  broadcast_date: 2019-12-20 11:33:32
 
 two:
-  circularid: 1
-  circulartype: MyString
+  circular_type: MyString
   from: MyText
   keywords: MyText
-  receiptdate: 2019-12-15 17:32:10
-  broadcastdate: 2019-12-15 17:32:10
+  receipt_date: 2019-12-20 11:33:32
+  broadcast_date: 2019-12-20 11:33:32

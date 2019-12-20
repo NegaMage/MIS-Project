@@ -17,7 +17,7 @@ class RegistersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create register" do
     assert_difference('Register.count') do
-      post registers_url, params: { register: { deadline: @register.deadline, firstreminder: @register.firstreminder, numofreminders: @register.numofreminders, registerid: @register.registerid, registertype: @register.registertype, reminderemail: @register.reminderemail, reminderperiod: @register.reminderperiod } }
+      post registers_url, params: { register: { deadline: @register.deadline, first_reminder: @register.first_reminder, no_of_reminders: @register.no_of_reminders, register_type: @register.register_type, reminder_email: @register.reminder_email, reminder_period: @register.reminder_period } }
     end
 
     assert_redirected_to register_url(Register.last)
@@ -34,7 +34,7 @@ class RegistersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update register" do
-    patch register_url(@register), params: { register: { deadline: @register.deadline, firstreminder: @register.firstreminder, numofreminders: @register.numofreminders, registerid: @register.registerid, registertype: @register.registertype, reminderemail: @register.reminderemail, reminderperiod: @register.reminderperiod } }
+    patch register_url(@register), params: { register: { deadline: @register.deadline, first_reminder: @register.first_reminder, no_of_reminders: @register.no_of_reminders, register_type: @register.register_type, reminder_email: @register.reminder_email, reminder_period: @register.reminder_period } }
     assert_redirected_to register_url(@register)
   end
 

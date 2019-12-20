@@ -14,12 +14,11 @@ class CircularsTest < ApplicationSystemTestCase
     visit circulars_url
     click_on "New Circular"
 
-    fill_in "Broadcastdate", with: @circular.broadcastdate
-    fill_in "Circularid", with: @circular.circularid
-    fill_in "Circulartype", with: @circular.circulartype
+    fill_in "Broadcast date", with: @circular.broadcast_date
+    fill_in "Circular type", with: @circular.circular_type
     fill_in "From", with: @circular.from
     fill_in "Keywords", with: @circular.keywords
-    fill_in "Receiptdate", with: @circular.receiptdate
+    fill_in "Receipt date", with: @circular.receipt_date
     click_on "Create Circular"
 
     assert_text "Circular was successfully created"
@@ -30,12 +29,11 @@ class CircularsTest < ApplicationSystemTestCase
     visit circulars_url
     click_on "Edit", match: :first
 
-    fill_in "Broadcastdate", with: @circular.broadcastdate
-    fill_in "Circularid", with: @circular.circularid
-    fill_in "Circulartype", with: @circular.circulartype
+    fill_in "Broadcast date", with: @circular.broadcast_date
+    fill_in "Circular type", with: @circular.circular_type
     fill_in "From", with: @circular.from
     fill_in "Keywords", with: @circular.keywords
-    fill_in "Receiptdate", with: @circular.receiptdate
+    fill_in "Receipt date", with: @circular.receipt_date
     click_on "Update Circular"
 
     assert_text "Circular was successfully updated"
