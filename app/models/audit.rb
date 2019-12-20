@@ -1,4 +1,5 @@
 class Audit < ApplicationRecord
     belongs_to :unit
-    validates :unit_id, presence: true
+    has_many :auditors
+    has_many :employees , through: :auditors
 end
