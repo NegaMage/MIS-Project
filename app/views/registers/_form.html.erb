@@ -12,41 +12,38 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :registerid %>
-    <%= form.number_field :registerid %>
-  </div>
-
-  <div class="field">
-    <%= form.label :registertype %>
-    <%= form.text_field :registertype %>
+    <%= form.label :register_type %>
+    <%= form.text_field :register_type %>
   </div>
 
   <div class="field">
     <%= form.label :deadline %>
     <%= form.datetime_select :deadline %>
   </div>
+
   <div class="field">
-    <%= form.label :regfile%>
-    <%= form.file_field :regfile %>
-  </div>
-  <div class="field">
-    <%= form.label :firstreminder %>
-    <%= form.datetime_select :firstreminder %>
+    <%= form.label :register_file %>
+    <%= form.file_field :register_file %>
   </div>
 
   <div class="field">
-    <%= form.label :numofreminders %>
-    <%= form.number_field :numofreminders %>
+    <%= form.label :first_reminder %>
+    <%= form.datetime_select :first_reminder %>
   </div>
 
   <div class="field">
-    <%= form.label :reminderperiod %>
-    <%= form.number_field :reminderperiod %>
+    <%= form.label :no_of_reminders %>
+    <%= form.number_field :no_of_reminders %>
   </div>
 
   <div class="field">
-    <%= form.label :reminderemail %>
-    <%= form.text_field :reminderemail %>
+    <%= form.label :reminder_period %>
+    <%= form.number_field :reminder_period %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reminder_email %>
+    <%= form.text_field :reminder_email %>
   </div>
 
   <div class="actions">

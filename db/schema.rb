@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_20_045807) do
+ActiveRecord::Schema.define(version: 2019_12_20_060811) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -70,12 +70,11 @@ ActiveRecord::Schema.define(version: 2019_12_20_045807) do
   end
 
   create_table "circulars", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "circularid"
-    t.string "circulartype"
+    t.string "circular_type"
     t.text "from"
     t.text "keywords"
-    t.datetime "receiptdate"
-    t.datetime "broadcastdate"
+    t.datetime "receipt_date"
+    t.datetime "broadcast_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -94,13 +93,12 @@ ActiveRecord::Schema.define(version: 2019_12_20_045807) do
   end
 
   create_table "registers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "registerid"
-    t.string "registertype"
+    t.string "register_type"
     t.datetime "deadline"
-    t.datetime "firstreminder"
-    t.integer "numofreminders"
-    t.integer "reminderperiod"
-    t.string "reminderemail"
+    t.datetime "first_reminder"
+    t.integer "no_of_reminders"
+    t.integer "reminder_period"
+    t.string "reminder_email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

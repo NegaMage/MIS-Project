@@ -15,12 +15,11 @@ class RegistersTest < ApplicationSystemTestCase
     click_on "New Register"
 
     fill_in "Deadline", with: @register.deadline
-    fill_in "Firstreminder", with: @register.firstreminder
-    fill_in "Numofreminders", with: @register.numofreminders
-    fill_in "Registerid", with: @register.registerid
-    fill_in "Registertype", with: @register.registertype
-    fill_in "Reminderemail", with: @register.reminderemail
-    fill_in "Reminderperiod", with: @register.reminderperiod
+    fill_in "First reminder", with: @register.first_reminder
+    fill_in "No of reminders", with: @register.no_of_reminders
+    fill_in "Register type", with: @register.register_type
+    fill_in "Reminder email", with: @register.reminder_email
+    fill_in "Reminder period", with: @register.reminder_period
     click_on "Create Register"
 
     assert_text "Register was successfully created"
@@ -32,12 +31,11 @@ class RegistersTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Deadline", with: @register.deadline
-    fill_in "Firstreminder", with: @register.firstreminder
-    fill_in "Numofreminders", with: @register.numofreminders
-    fill_in "Registerid", with: @register.registerid
-    fill_in "Registertype", with: @register.registertype
-    fill_in "Reminderemail", with: @register.reminderemail
-    fill_in "Reminderperiod", with: @register.reminderperiod
+    fill_in "First reminder", with: @register.first_reminder
+    fill_in "No of reminders", with: @register.no_of_reminders
+    fill_in "Register type", with: @register.register_type
+    fill_in "Reminder email", with: @register.reminder_email
+    fill_in "Reminder period", with: @register.reminder_period
     click_on "Update Register"
 
     assert_text "Register was successfully updated"

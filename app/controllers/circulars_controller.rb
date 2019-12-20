@@ -69,6 +69,6 @@ class CircularsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def circular_params
-      params.require(:circular).permit(:circularid, :circulartype, :from, :keywords, :file, :receiptdate, :broadcastdate)
+      params.require(:circular).permit(:circular_type, :from, :keywords, :circular_file, :receipt_date, :broadcast_date)
     end
 end

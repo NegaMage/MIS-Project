@@ -1,13 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Circular ID:</strong>
-  <%= @circular.circularid %>
-</p>
-
-<p>
-  <strong>Circular Type:</strong>
-  <%= @circular.circulartype %>
+  <strong>Circular type:</strong>
+  <%= @circular.circular_type %>
 </p>
 
 <p>
@@ -21,17 +16,18 @@
 </p>
 
 <p>
-  <%= link_to "Download file", @circular.file, download: '' %>
+  <strong>Download circular file:</strong>
+  <%= link_to "Download", @circular.circular_file, download: '' %>
 </p>
 
 <p>
-  <strong>Receipt Date:</strong>
-  <%= @circular.receiptdate %>
+  <strong>Receipt date:</strong>
+  <%= @circular.receipt_date %>
 </p>
 
 <p>
-  <strong>Broadcast Date:</strong>
-  <%= @circular.broadcastdate %>
+  <strong>Broadcast date:</strong>
+  <%= @circular.broadcast_date %>
 </p>
 
 <%= link_to 'Edit', edit_circular_path(@circular) %> |

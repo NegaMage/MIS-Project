@@ -69,6 +69,6 @@ class RegistersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def register_params
-      params.require(:register).permit(:registerid, :registertype, :regfile, :deadline, :firstreminder, :numofreminders, :reminderperiod, :reminderemail)
+      params.require(:register).permit(:register_type, :deadline, :first_reminder, :no_of_reminders, :reminder_period, :reminder_email, :register_file)
     end
 end
