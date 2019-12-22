@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Report Code:</strong>
+  <%= @report.report_code %>
+</p>
+
+<p>
+  <strong>Report Title:</strong>
+  <%= @report.report_title %>
+</p>
+
+<p>
+  <strong>Audit Unit:</strong>
+  <%= @report.audit_unit %>
+</p>
+
+<p>
+  <strong>Creation Date:</strong>
+  <%= @report.creation_date %>
+</p>
+
+<p>
+  <strong>Date of Dispatch - Party:</strong>
+  <%= @report.dod_party %>
+</p>
+
+<p>
+  <strong>Date of Receipt - Vetting:</strong>
+  <%= @report.dor_vetting %>
+</p>
+
+<p>
+  <strong>Date of Dispatch - Vetting:</strong>
+  <%= @report.dod_vetting %>
+</p>
+
+<p>
+  <strong>Date of Dispatch - Entity:</strong>
+  <%= @report.dod_entity %>
+</p>
+
+<p>
+  <strong>Remakrs:</strong>
+  <%= @report.remarks %>
+</p>
+
+<p>
+  <strong>Freeze:</strong>
+  <%= @report.freeze %>
+</p>
+
+<%= link_to 'Edit', edit_report_path(@report) %> |
+<%= link_to 'Back', reports_path %>

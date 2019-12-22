@@ -1,0 +1,67 @@
+<%= form_with(model: report, local: true) do |form| %>
+  <% if report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(report.errors.count, "error") %> prohibited this report from being saved:</h2>
+
+      <ul>
+        <% report.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :report_code %>
+    <%= form.text_field :report_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :report_title %>
+    <%= form.text_area :report_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :audit_unit %>
+    <%= form.text_area :audit_unit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :creation_date %>
+    <%= form.datetime_select :creation_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dod_party %>
+    <%= form.datetime_select :dod_party %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dor_vetting %>
+    <%= form.datetime_select :dor_vetting %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dod_vetting %>
+    <%= form.datetime_select :dod_vetting%>
+  </div>
+
+  <div class="field">
+    <%= form.label :dod_entity %>
+    <%= form.datetime_select :dod_entity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :remarks%>
+    <%= form.text_area :remarks %>
+  </div>
+
+  <div class="field">
+    <%= form.label :freeze %>
+    <%= form.check_box :freeze %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

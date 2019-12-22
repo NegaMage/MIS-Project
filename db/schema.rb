@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_20_060811) do
+ActiveRecord::Schema.define(version: 2019_12_22_122412) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -103,6 +103,22 @@ ActiveRecord::Schema.define(version: 2019_12_20_060811) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "reports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "audit_id"
+    t.string "report_code"
+    t.text "report_title"
+    t.datetime "creation_date"
+    t.datetime "dod_party"
+    t.datetime "dor_vetting"
+    t.datetime "dod_vetting"
+    t.datetime "dod_entity"
+    t.text "remakrs"
+    t.boolean "freeze"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["audit_id"], name: "index_reports_on_audit_id"
+  end
+
   create_table "units", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "oc"
     t.string "ministry"
@@ -127,4 +143,5 @@ ActiveRecord::Schema.define(version: 2019_12_20_060811) do
   add_foreign_key "auditors", "audits"
   add_foreign_key "auditors", "employees"
   add_foreign_key "audits", "units"
+  add_foreign_key "reports", "audits"
 end
