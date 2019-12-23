@@ -9,6 +9,7 @@ class CreateReports < ActiveRecord::Migration[6.0]
       t.datetime :dor_vetting
       t.datetime :dod_vetting
       t.datetime :dod_entity
+<<<<<<< HEAD
       t.text :general_remakrs
       t.integer :vs_auditor_id
       t.integer :vs_aao_id
@@ -26,6 +27,9 @@ class CreateReports < ActiveRecord::Migration[6.0]
       t.datetime :vetting_2_time
       t.datetime :vetting_3_time
       t.datetime :vetting_4_time
+=======
+      t.text :remakrs
+>>>>>>> bb7b8065796ac938c2172bfd904f359548a51fcf
       t.boolean :freeze
       t.timestamps
     end

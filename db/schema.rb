@@ -112,6 +112,7 @@ ActiveRecord::Schema.define(version: 2019_12_22_122412) do
     t.datetime "dor_vetting"
     t.datetime "dod_vetting"
     t.datetime "dod_entity"
+<<<<<<< HEAD
     t.text "general_remakrs"
     t.integer "vs_auditor_id"
     t.integer "vs_aao_id"
@@ -129,6 +130,9 @@ ActiveRecord::Schema.define(version: 2019_12_22_122412) do
     t.datetime "vetting_2_time"
     t.datetime "vetting_3_time"
     t.datetime "vetting_4_time"
+=======
+    t.text "remakrs"
+>>>>>>> bb7b8065796ac938c2172bfd904f359548a51fcf
     t.boolean "freeze"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
