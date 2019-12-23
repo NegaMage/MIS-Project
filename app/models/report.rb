@@ -1,7 +1,9 @@
 class Report < ApplicationRecord
-<<<<<<< HEAD
   belongs_to :audit
-=======
-  has_one :audit
->>>>>>> bb7b8065796ac938c2172bfd904f359548a51fcf
+  validate :emp_check
+  private def emp_check
+    if !(Employee.find(vs_auditor_id))
+      errors[:base] << " doesnt exist in the employees")
+    end
+  end
 end
