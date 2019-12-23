@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  report_code: MyString
+  report_title: MyText
+  audit_unit: 1
+  creation_date: 2019-12-22 16:24:12
+  dod_party: 2019-12-22 16:24:12
+  dor_vetting: 2019-12-22 16:24:12
+  dod_vetting: 2019-12-22 16:24:12
+  dod_entity: 2019-12-22 16:24:12
+  remakrs: MyText
+  freeze: false
+
+two:
+  report_code: MyString
+  report_title: MyText
+  audit_unit: 1
+  creation_date: 2019-12-22 16:24:12
+  dod_party: 2019-12-22 16:24:12
+  dor_vetting: 2019-12-22 16:24:12
+  dod_vetting: 2019-12-22 16:24:12
+  dod_entity: 2019-12-22 16:24:12
+  remakrs: MyText
+  freeze: false
