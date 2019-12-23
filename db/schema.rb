@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_20_060811) do
+ActiveRecord::Schema.define(version: 2019_12_22_122412) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -103,6 +103,38 @@ ActiveRecord::Schema.define(version: 2019_12_20_060811) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "reports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "audit_id"
+    t.string "report_code"
+    t.text "report_title"
+    t.datetime "creation_date"
+    t.datetime "dod_party"
+    t.datetime "dor_vetting"
+    t.datetime "dod_vetting"
+    t.datetime "dod_entity"
+    t.text "general_remakrs"
+    t.integer "vs_auditor_id"
+    t.integer "vs_aao_id"
+    t.integer "vs_srao_id"
+    t.integer "dd_id"
+    t.text "vs_auditor_remarks"
+    t.text "vs_aao_remarks"
+    t.text "vs_srao_remarks"
+    t.text "dd_remarks"
+    t.boolean "vetting_done_1"
+    t.boolean "vetting_done_2"
+    t.boolean "vetting_done_3"
+    t.boolean "vetting_done_dd"
+    t.datetime "vetting_1_time"
+    t.datetime "vetting_2_time"
+    t.datetime "vetting_3_time"
+    t.datetime "vetting_4_time"
+    t.boolean "freez"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["audit_id"], name: "index_reports_on_audit_id"
+  end
+
   create_table "units", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "oc"
     t.string "ministry"
@@ -127,4 +159,5 @@ ActiveRecord::Schema.define(version: 2019_12_20_060811) do
   add_foreign_key "auditors", "audits"
   add_foreign_key "auditors", "employees"
   add_foreign_key "audits", "units"
+  add_foreign_key "reports", "audits"
 end
