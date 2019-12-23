@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_22_122412) do
+ActiveRecord::Schema.define(version: 2019_12_23_135930) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -90,6 +90,29 @@ ActiveRecord::Schema.define(version: 2019_12_22_122412) do
     t.integer "experience"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "paras", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "para_title"
+    t.integer "para_type"
+    t.integer "para_number"
+    t.text "contents"
+    t.datetime "last_saved"
+    t.string "draft_status"
+    t.string "vs_auditor_status"
+    t.string "vs_aao_status"
+    t.string "vs_srao_status"
+    t.datetime "vs_auditor_time"
+    t.datetime "vs_aao_time"
+    t.datetime "vs_srao_time"
+    t.datetime "dd_time"
+    t.string "outstanding_status"
+    t.datetime "outstanding_status_time"
+    t.text "general_remarks"
+    t.text "vs_auditor_remarks"
+    t.text "vs_aao_remarks"
+    t.text "vs_srao_remarks"
+    t.text "dd_remarks"
   end
 
   create_table "registers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
